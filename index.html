@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Protótipo</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,700i,900" rel="stylesheet">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	background: #f3f3f3;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	background: #fff;
+	border: 1px solid #ccc;
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 960px) {
+
+	body {
+		max-width: 320px;
+		margin: 0 auto;
+		box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+	}
+}
+
+.wrapper {
+	max-width: 960px;
+	padding: 0 20px;
+}
+
+.header,
+.destination-list,
+.next-bus {
+	margin-bottom: 24px;
+}
+
+.header {
+	background: #C4C4C4;
+	min-height: 96px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-title {
+	margin-bottom: 16px;
+}
+
+.content {
+	text-align: center;
+	flex-grow: 1;
+}
+
+.content-header {
+	padding-bottom: 16px;
+	margin-bottom: 48px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.destination-list {
+	background: #c4c4c4;
+	display: flex;
+
+	justify-content: space-between;
+	padding: 24px 8px;
+}
+
+.destination-list .arrows {
+	cursor: pointer;
+}
+
+.next-bus .hour {
+	font-size: 72px;
+}
+
+.day-period-filter {
+	margin: 8px 0 24px;
+}
+
+.period-filter {
+	display: inline-block;
+	text-decoration: none;
+	color: #696969;
+	border: 1px solid #696969;
+	padding: 8px;
+	border-radius: 1px;
+	transition: all .2s ease;
+}
+
+.period-filter:hover,
+.period-filter.active {
+	background: #696969;
+	color: #fff;
+}
+
+.time-list .list-item {
+	/*margin-bottom: 24px;*/
+	padding: 16px 0;
+}
+
+.time-list > .list-item:nth-of-type(odd) {
+	background: #e9e9f9;
+}
+
+.time-list .time {
+	display: block;
+	font-size: 32px;
+	margin-bottom: 4px;
+}
+
+.time-list .time::after {
+	content: " nos dias";
+	font-size: 14px;
+}
+
+.day-tags {
+	display: flex;
+	justify-content: center;
+}
+
+.day-tags .tag {
+	margin-right: 8px;
+	font-size: 14px;
+
+	background: #c4c4c4;
+	padding: 4px;
+}
+
+.day-tags .sab {
+	/*background: #009900;*/
+	background: #848484;
+}
+
+.day-tags .dom {
+	/*background: #CC0000;*/
+	background: #848484;
+}
+
+.footer {
+	height: 72px;
+	background: #272727;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	margin-top: 48px;
+}
+</style>
+</head>
+<body>
+	<header class="header">
+		<h1>LOGO</h1>
+	</header>
+	<main class="content">
+		<div class="wrapper">
+			<div class="content-header">
+			<div class="destination-list">
+
+				<div class="destination">
+					<p>Canela</p>
+				</div>
+
+				<div class="arrows">
+					<i class="fas fa-exchange-alt"></i>
+				</div>
+
+				<div class="destination">
+					<p>Gramado</p>
+				</div>
+
+			</div>
+
+			<div class="next-bus">
+				<div class="hour">8:35</div>
+				<div class="description">
+					horário de saída
+				</div>
+			</div>
+			</div>
+	</div><!-- wrapper -->		
+			<h3 class="page-title">Lista completa de horários</h3>
+			<p>Filtrar por</p>
+
+			<div class="day-period-filter">
+				<a class="period-filter active" href="#">Todos</a>
+				<a class="period-filter" href="#">Manhã</a>
+				<a class="period-filter" href="#">Tarde</a>
+				<a class="period-filter" href="#">Noite</a>
+			</div>
+
+			<div class="time-list">
+
+				<div class="list-item">
+					<div class="time">8:45</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+				<div class="list-item">
+					<div class="time">8:55</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+				<div class="list-item">
+					<div class="time">9:15</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+				<div class="list-item">
+					<div class="time">8:45</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+				<div class="list-item">
+					<div class="time">8:55</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+				<div class="list-item">
+					<div class="time">9:15</div>
+					<div class="day-tags">
+						<div class="tag">SEG À SEX</div>
+						<div class="tag sab">SAB</div>
+						<div class="tag dom">DOM</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+				
+
+			</div>
+		
+		
+	</main>
+	<footer class="footer">
+		<p>Rodapé</p>
+	</footer>
+	
+</body>
+</html>
